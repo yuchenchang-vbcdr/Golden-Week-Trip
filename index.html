@@ -63,7 +63,6 @@
       z-index: -1;
     }
     
-    /* 餐廳推薦卡片專用樣式 */
     .restaurant-card { 
       background: rgba(16, 185, 129, 0.05); 
       border: 1px dashed rgba(16, 185, 129, 0.2); 
@@ -93,12 +92,17 @@
       </div>
     </header>
 
-    <div class="flex flex-wrap gap-2 md:gap-4 mb-12 sticky top-8 z-20 backdrop-blur-md py-4 -mx-4 px-4 rounded-3xl border border-white/5 bg-black/20" id="tabs">
-      <button onclick="switchTab(1)" class="tab-btn active relative px-6 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 01</button>
-      <button onclick="switchTab(2)" class="tab-btn relative px-6 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 02</button>
-      <button onclick="switchTab(3)" class="tab-btn relative px-6 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 03</button>
-      <button onclick="switchTab(4)" class="tab-btn relative px-6 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 04</button>
-      <button onclick="switchTab(5)" class="tab-btn relative px-6 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 05</button>
+    <div class="flex flex-wrap items-center gap-2 md:gap-4 mb-12 sticky top-8 z-20 backdrop-blur-md py-4 -mx-4 px-4 rounded-3xl border border-white/5 bg-black/20" id="tabs">
+      <button onclick="switchTab(1)" class="tab-btn active relative px-5 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 01</button>
+      <button onclick="switchTab(2)" class="tab-btn relative px-5 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 02</button>
+      <button onclick="switchTab(3)" class="tab-btn relative px-5 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 03</button>
+      <button onclick="switchTab(4)" class="tab-btn relative px-5 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 04</button>
+      <button onclick="switchTab(5)" class="tab-btn relative px-5 py-3 rounded-2xl font-mono text-xs transition-all duration-300 border border-white/10 hover:text-white/80 text-white/40">DAY 05</button>
+      
+      <a href="https://maps.app.goo.gl/W79LpgNLHQbBwq8d8" target="_blank" class="ml-auto flex items-center gap-2 px-4 py-2.5 rounded-2xl font-mono text-xs transition-all duration-300 border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/30 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.1)]">
+        <i data-lucide="map" class="w-4 h-4"></i>
+        <span class="hidden sm:inline">SHARED LIST</span>
+      </a>
     </div>
 
     <div id="day-1" class="tab-content active grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-start">
@@ -491,6 +495,19 @@
     <footer class="mt-40 flex flex-col md:flex-row justify-between items-end gap-12 border-t border-white/5 pt-16">
       <div class="flex flex-col gap-8">
         
+        <a href="https://maps.app.goo.gl/W79LpgNLHQbBwq8d8" target="_blank" class="flex items-center gap-4 hover:opacity-80 transition-opacity cursor-pointer group">
+          <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-emerald-500/20 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-2xl"></div>
+            <i data-lucide="map" class="text-emerald-400 relative z-10 w-6 h-6"></i>
+          </div>
+          <div>
+            <p class="text-xs text-emerald-400 font-mono uppercase tracking-widest mb-1 flex items-center gap-1">
+              Google Maps <i data-lucide="external-link" class="w-3 h-3"></i>
+            </p>
+            <p class="text-sm text-white/60 font-medium italic">Kyushu Road Trip 地點共用清單</p>
+          </div>
+        </a>
+
         <a href="https://open.spotify.com/playlist/6WvDFdRQd5OKusMG0vnhQj?si=6122369d642c4737" target="_blank" class="flex items-center gap-4 hover:opacity-80 transition-opacity cursor-pointer group">
           <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center relative overflow-hidden">
             <div class="absolute inset-0 bg-emerald-500/20 scale-0 group-hover:scale-100 transition-transform duration-500 rounded-2xl"></div>
